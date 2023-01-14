@@ -3,6 +3,7 @@ const { default: mongoose } = require('mongoose');
 const app = express();
 const MyModel = require('./Schema');
 const cors = require('cors');
+const PORT = process.env.PORT || 3000;
 
 const DB = "mongodb+srv://BoopathiHari:boopathi007@cluster0.blxf888.mongodb.net/?retryWrites=true&w=majority";
 
@@ -118,6 +119,6 @@ app.delete("/DeleteAll", (req, res) => {
 })
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('Server listening on port 3000');
 });
